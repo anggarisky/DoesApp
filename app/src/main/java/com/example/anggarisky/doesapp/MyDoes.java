@@ -5,14 +5,24 @@ public class MyDoes {
     String titledoes;
     String datedoes;
     String descdoes;
+    String keydoes;
 
     public MyDoes() {
     }
 
-    public MyDoes(String titledoes, String datedoes, String descdoes) {
+    public MyDoes(String titledoes, String datedoes, String descdoes, String keydoes) {
         this.titledoes = titledoes;
         this.datedoes = datedoes;
         this.descdoes = descdoes;
+        this.keydoes = keydoes;
+    }
+
+    public String getKeydoes() {
+        return keydoes;
+    }
+
+    public void setKeydoes(String keydoes) {
+        this.keydoes = keydoes;
     }
 
     public String getTitledoes() {

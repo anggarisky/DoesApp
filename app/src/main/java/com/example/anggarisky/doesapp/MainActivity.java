@@ -1,10 +1,13 @@
 package com.example.anggarisky.doesapp;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +22,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     TextView titlepage, subtitlepage, endpage;
+    Button btnAddNew;
 
     DatabaseReference reference;
     RecyclerView ourdoes;
@@ -34,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         subtitlepage = findViewById(R.id.subtitlepage);
         endpage = findViewById(R.id.endpage);
 
+        btnAddNew = findViewById(R.id.btnAddNew);
+
         // import font
         Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/ML.ttf");
         Typeface MMedium = Typeface.createFromAsset(getAssets(), "fonts/MM.ttf");
@@ -42,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
         titlepage.setTypeface(MMedium);
         subtitlepage.setTypeface(MLight);
         endpage.setTypeface(MLight);
+
+        btnAddNew.setTypeface(MLight);
+
+        btnAddNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(MainActivity.this,NewTaskAct.class);
+                startActivity(a);
+            }
+        });
 
 
         // working with data

@@ -16,25 +16,50 @@
         android:background="@color/colorPrimaryDark"
         android:layout_height="198dp">
 
-        <TextView
-            android:id="@+id/titlepage"
-            android:layout_marginTop="20dp"
-            android:textSize="32sp"
-            android:textColor="#FFF"
-            android:text="My Does"
-            android:textAlignment="center"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
+            
+            <LinearLayout
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/subtitlepage"
-            android:textSize="18sp"
-            android:textColor="#4A4E6A"
-            android:layout_marginTop="8dp"
-            android:text="Finish Them Quickly Today"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/titlepage"
+                    android:layout_marginTop="20dp"
+                    android:textSize="32sp"
+                    android:textColor="#FFF"
+                    android:text="My Does"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/subtitlepage"
+                    android:textSize="18sp"
+                    android:textColor="#4A4E6A"
+                    android:layout_marginTop="8dp"
+                    android:text="Finish Them Quickly Today"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="60dp"
+                android:id="@+id/btnAddNew"
+                android:text="+"
+                android:background="@drawable/bgbtnnew"
+                android:textSize="38sp"
+                android:textColor="#FFF"
+                android:textAlignment="center"
+                android:layout_width="52dp"
+                android:layout_height="52dp" />
+            
+        </LinearLayout>
 
         <View
             android:layout_marginTop="20dp"
